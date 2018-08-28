@@ -36,5 +36,10 @@ fetchDeomotivational()
 
 	const img = document.createElement("img");
 	img.src = chosenPost.data.url;
-	document.body.appendChild(img);
+
+	const link = document.createElement("a");
+	link.href = 'https://www.reddit.com' + chosenPost.data.permalink;
+	link.appendChild(img);
+
+	document.body.appendChild(link);
 });
